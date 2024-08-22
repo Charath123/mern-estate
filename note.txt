@@ -1,0 +1,2 @@
+=> npm create vite@latest client => This is for frontend side (mark react) 
+=> goto tailewind css website and then move to docs, then select vite and have options to run and install tailwind
