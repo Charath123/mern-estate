@@ -9,3 +9,15 @@
    5) git remote add origin  (url)
    6) git push -u origin main
 => for routes npm i react-router-dom   
+
+BACKEND:
+=> npm init -y
+"scripts": {
+    "dev": "nodemon api/index.js",
+    "start": "node api/index.js"
+  },
+
+  to run : npm run dev
+
+=> to connect DB
+ -> npm i mongoose
