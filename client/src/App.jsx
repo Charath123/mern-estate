@@ -1,11 +1,25 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home";
+import Signin from "./pages/Signin";
+
+import About from "./pages/About";
+import Profile from "./pages/Profile";
+import SignUp from "./pages/SignUp";
+import Header from "./components/Header";
 
 const App = () => {
   return (
-    <div className="text-red-500">
-      <h1>Hello</h1>
-      <p>hi</p>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/sign-in" element={<Signin />}></Route>
+        <Route path="/sign-up" element={<SignUp />}></Route>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/profile" element={<Profile />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 

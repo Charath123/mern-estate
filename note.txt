@@ -1,2 +1,11 @@
 => npm create vite@latest client => This is for frontend side (mark react) 
 => goto tailewind css website and then move to docs, then select vite and have options to run and install tailwind
+
+=> GIT :-
+   1) git init
+   2) git add .
+   3) git commit -m "first commit"
+   4) git branch -M main
+   5) git remote add origin  (url)
+   6) git push -u origin main
+=> for routes npm i react-router-dom   
