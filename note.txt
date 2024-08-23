@@ -21,3 +21,6 @@ BACKEND:
 
 => to connect DB
  -> npm i mongoose
+
+=> to protect password and doest not show actuall password to others use bcryptjs
+  npm i bcryptjs 
