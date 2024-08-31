@@ -27,3 +27,11 @@ BACKEND:
 
 => In signIn function we create token using jsonweb token for thid (npm i jsonwebtoken)
 
+Redux Toolkit: (go to redux page and do the initial steps in that page)
+=> npm install @reduxjs/toolkit react-redux (in client)
+
+Resux-Persist:
+=>It is used to store data in user after refresh the page also (npm i redux-persist) in frontend
+
+
+10
