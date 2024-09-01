@@ -34,4 +34,5 @@ Resux-Persist:
 =>It is used to store data in user after refresh the page also (npm i redux-persist) in frontend
 
 
-10
+Firebase:
+=>It is used to manage with google , used to authenticate ans login by using GOOGLE(npm install firebase) in client folder

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import OAuth from "../components/OAuth";
 
 // const SignUp = () => {
 //   const [formData, setFormData] = useState({});
@@ -215,7 +216,7 @@ const SignUp = () => {
 
       setLoading(false);
       setError(null);
-      navigate("/sign-in");
+      navigate("/");
     } catch (error) {
       setLoading(false);
       setError(error.message);
@@ -254,6 +255,7 @@ const SignUp = () => {
         >
           {loading ? "Loading..." : "Signup"}
         </button>
+        <OAuth></OAuth>
       </form>
 
       {error && (
