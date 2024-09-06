@@ -35,4 +35,23 @@ Resux-Persist:
 
 
 Firebase:
-=>It is used to manage with google , used to authenticate ans login by using GOOGLE(npm install firebase) in client folder
+=>It is used to manage with google , used to authenticate and login by using GOOGLE(npm install firebase) in client folder
+
+Image FIrebase: 14 L 13T
+
+THIS IS FIRE BASE CONFIG IN CHROME:
+
+rules_version = '2';
+
+// Craft rules based on data in your Firestore database
+// allow write: if firestore.get(
+//    /databases/(default)/documents/users/$(request.auth.uid)).data.isAdmin;
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      allow read;
+      allow write: if request.resource.size<10*1024*1024 && 
+      request.resource.contentType.matches('image/*')
+    }
+  }
+}
