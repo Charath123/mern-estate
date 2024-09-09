@@ -222,7 +222,7 @@ const Listing = () => {
     fetchListing();
   }, [params.listingId]);
   return (
-    <main>
+    <main className="m-5">
       {loading && <p className="text-center my-7 text-2xl">Loading...</p>}
       {error && (
         <p className="text-center my-8 text-2xl text-red-800">

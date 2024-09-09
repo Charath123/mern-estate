@@ -12,6 +12,7 @@ import CreateListing from "./pages/CreateListing";
 import Listing from "./pages/Listing";
 import UpdateListing from "./pages/UpdateListing";
 import Search from "./pages/Search";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
           ></Route>
         </Route>
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };
