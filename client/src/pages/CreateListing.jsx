@@ -344,7 +344,7 @@ const CreateListing = () => {
                 disabled={uploading}
                 onClick={handleImageSubmit}
                 type="button"
-                className="p-2 text-white border  rounded uppercase hover:shadow-lg disabled:opacity-80 bg-green-500 hover:bg-green-800"
+                className="p-2 text-white border  rounded uppercase hover:shadow-lg disabled:opacity-80 bg-green-500 hover:bg-green-800 rounded-2xl"
               >
                 {uploading ? "Uploading..." : "Upload"}
               </button>
@@ -375,7 +375,7 @@ const CreateListing = () => {
 
             <button
               disabled={loading || uploading}
-              className="p-3 bg-slate-700 text-white rounded-lg uppercase hover:opacity-95 disabled:opacity-80"
+              className="p-3 bg-slate-700 text-white rounded-2xl uppercase hover:opacity-95 disabled:opacity-80"
             >
               {loading ? "Creating..." : "Create Listing"}
             </button>

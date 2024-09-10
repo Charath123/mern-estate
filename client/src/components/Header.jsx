@@ -1,5 +1,5 @@
 import React from "react";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaHome } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
@@ -26,12 +26,17 @@ const Header = () => {
   }, [location.search]);
 
   return (
-    <header className="bg-green-200 shadow-md ">
+    <header className="bg-slate-300 shadow-md ">
       <div className="flex justify-between items-center max-w-6xl mx-auto p-3">
         <Link to="/">
           <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
-            <span className="text-slate-500">Real</span>
-            <span className="text-slate-700">Estate</span>
+            <img
+              src="https://img.freepik.com/free-vector/logo-real-estate-home-solutions-that-is-home-solution_527952-33.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1725926400&semt=ais_hybrid"
+              alt="Real Estate Logo"
+              className="w-10 h-10 mr-2 border rounded-xl" // Adjust size with Tailwind classes
+            />
+            <span className="text-yellow-800">Real</span>
+            <span className="text-yellow-600">Estate</span>
           </h1>
         </Link>
         <form
@@ -47,14 +52,15 @@ const Header = () => {
           />
           <FaSearch className="text-slate-600" />
         </form>
-        <ul className="flex gap-4">
+        <ul className="flex gap-5">
           <Link to="/">
-            <li className=" hidden sm:inline text-slate-700 hover:underline cursor-pointer">
-              Home
+            <li className=" hidden sm:inline text-slate-700 hover:underline cursor-pointer text-2xl ">
+              <FaHome />
+              {/* Home */}
             </li>
           </Link>
           <Link to="/about">
-            <li className=" hidden sm:inline text-slate-700 hover:underline cursor-pointer">
+            <li className="text-lg font-semibold hidden sm:inline text-slate-700  hover:text-black cursor-pointer">
               About
             </li>
           </Link>
@@ -63,6 +69,11 @@ const Header = () => {
               Sign In
             </li>
           </Link> */}
+          <Link to="/contact-owner">
+            <li className="text-lg font-semibold hidden sm:inline text-slate-700 hover:text-black cursor-pointer">
+              ContactUs
+            </li>
+          </Link>
           <Link to="/profile">
             {currentUser ? (
               <img
@@ -71,7 +82,9 @@ const Header = () => {
                 className="rounded-full h-7 w-7 object-cover"
               />
             ) : (
-              <li className="text-slate-700 hover:underline">Sign In</li>
+              <li className="text-lg font-semibold text-slate-700 hover:text-black">
+                Sign In
+              </li>
             )}
           </Link>
         </ul>

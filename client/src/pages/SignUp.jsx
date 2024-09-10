@@ -251,7 +251,7 @@ const SignUp = () => {
             onChange={handleChange}
           />
           <button
-            className="bg-green-500 text-white p-3 rounded-lg uppercase disabled:opacity-80 hover:bg-green-800"
+            className="bg-blue-500 text-white p-3 rounded-3xl uppercase disabled:opacity-80 hover:bg-blue-800"
             type="submit"
             disabled={loading} // Disable button while loading
           >

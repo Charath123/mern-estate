@@ -234,12 +234,12 @@ const Profile = () => {
 
           <button
             disabled={loading}
-            className="bg-slate-600 text-white p-3 rounded-lg uppercase text-center hover:opacity-95 hover:bg-slate-800"
+            className=" text-black p-3 rounded-3xl uppercase text-center border-2 border-black hover:border-3  hover:bg-slate-200"
           >
             {loading ? "Loading..." : "Update"}
           </button>
           <Link
-            className="bg-green-600 text-white p-3 rounded-lg uppercase text-center hover:opacity-95 hover:bg-green-800"
+            className=" text-black p-3 rounded-3xl uppercase text-center border-2 border-black hover:border-3 hover:bg-slate-200"
             to={"/create-listing"}
           >
             Create Listing
@@ -247,13 +247,25 @@ const Profile = () => {
         </form>
         <div className="flex justify-between mt-5">
           <span
-            onClick={handleDeleteUser}
+            // onClick={handleDeleteUser}
+            onClick={() => {
+              if (
+                window.confirm("Are you sure you want to delete this user?")
+              ) {
+                handleDeleteUser();
+              }
+            }}
             className="text-black cursor-pointer border rounded-xl p-3 border-black border-2 font-semibold bg-slate-100 hover:text-white hover:bg-red-400"
           >
             Delete account
           </span>
           <span
-            onClick={handleSignOut}
+            //onClick={handleSignOut}
+            onClick={() => {
+              if (window.confirm("Are you want to signOut?")) {
+                handleSignOut();
+              }
+            }}
             className="text-black cursor-pointer border rounded-xl p-3 border-black border-2 font-semibold bg-slate-100 hover:text-white hover:bg-red-400"
           >
             Sign out
@@ -301,7 +313,16 @@ const Profile = () => {
 
                 <div className="flex gap-3  item-center">
                   <button
-                    onClick={() => handleListingDelete(listing._id)}
+                    // onClick={() => handleListingDelete(listing._id)}
+                    onClick={() => {
+                      if (
+                        window.confirm(
+                          "Are you sure you want to delete this listing?"
+                        )
+                      ) {
+                        handleListingDelete(listing._id);
+                      }
+                    }}
                     className="text-white uppercase border p-1 border-slate-800 rounded-lg bg-red-400 hover:bg-red-800"
                   >
                     Delete

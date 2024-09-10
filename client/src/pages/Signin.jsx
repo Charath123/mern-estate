@@ -225,7 +225,7 @@ const SignIn = () => {
   return (
     <div className="background-container">
       <div className="background-overlay"></div>
-      <div className="p-3 max-w-lg mx-auto">
+      <div className="p-3 max-w-lg mx-auto ">
         <h1 className="text-3xl text-center font-semibold m-9">Sign In</h1>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <input
@@ -243,7 +243,7 @@ const SignIn = () => {
             onChange={handleChange}
           />
           <button
-            className="bg-green-500 text-white p-3 rounded-lg uppercase disabled:opacity-80 hover:bg-green-800"
+            className="bg-blue-700 text-white p-3 rounded-3xl uppercase disabled:opacity-80 hover:bg-blue-900"
             type="submit"
             disabled={loading} // Disable button while loading
           >

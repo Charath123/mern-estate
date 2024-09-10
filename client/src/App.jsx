@@ -13,6 +13,7 @@ import Listing from "./pages/Listing";
 import UpdateListing from "./pages/UpdateListing";
 import Search from "./pages/Search";
 import Footer from "./components/Footer";
+import ContactForm from "./pages/ContactForm";
 
 const App = () => {
   return (
@@ -24,7 +25,9 @@ const App = () => {
         <Route path="/sign-up" element={<SignUp />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/listing/:listingId" element={<Listing />}></Route>
-        <Route path="/search" element={<Search />}></Route>
+        {/* <Route path="/search" element={<Search />}></Route> */}
+
+        <Route path="/contact-owner" element={<ContactForm />}></Route>
 
         <Route element={<PrivateRoute />}>
           <Route path="/profile" element={<Profile />}></Route>
@@ -33,6 +36,7 @@ const App = () => {
             path="/update-listing/:listingId"
             element={<UpdateListing />}
           ></Route>
+          <Route path="/search" element={<Search />}></Route>
         </Route>
       </Routes>
       <Footer />
