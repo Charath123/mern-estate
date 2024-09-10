@@ -83,7 +83,7 @@ const Header = () => {
               />
             ) : (
               <li className="text-lg font-semibold text-slate-700 hover:text-black">
-                Sign In
+                SignIn
               </li>
             )}
           </Link>

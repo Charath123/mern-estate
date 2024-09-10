@@ -34,7 +34,7 @@ const Footer = () => {
             <Link to="/about" className="text-sm hover:text-gray-400">
               About
             </Link>
-            <Link to="/contact" className="text-sm hover:text-gray-400">
+            <Link to="/contact-owner" className="text-sm hover:text-gray-400">
               Contact
             </Link>
             <Link to="/privacy" className="text-sm hover:text-gray-400">
