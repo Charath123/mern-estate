@@ -16,9 +16,9 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Here you can add form submission logic, e.g., sending data to an API
+
     console.log("Form data submitted:", formData);
-    // Reset form
+
     setFormData({
       name: "",
       email: "",
