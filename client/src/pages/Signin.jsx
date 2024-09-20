@@ -7,6 +7,7 @@ import {
   signInFailure,
 } from "../redux/user/userSlice";
 import OAuth from "../components/OAuth";
+import { FaSignInAlt } from "react-icons/fa";
 
 // const SignIn = () => {
 //   const [formData, setFormData] = useState({});
@@ -243,10 +244,11 @@ const SignIn = () => {
             onChange={handleChange}
           />
           <button
-            className="bg-blue-700 text-white p-3 rounded-3xl uppercase disabled:opacity-80 hover:bg-blue-900"
+            className=" text-black p-3 rounded-3xl uppercase flex items-center space-x-2 gap-4  justify-center border border-black hover:border-2 hover:bg-slate-200"
             type="submit"
             disabled={loading} // Disable button while loading
           >
+            <FaSignInAlt />
             {loading ? "Loading..." : "Sign in"}
           </button>
           <OAuth></OAuth>

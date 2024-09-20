@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import OAuth from "../components/OAuth";
+import { FaSignOutAlt } from "react-icons/fa";
 
 // const SignUp = () => {
 //   const [formData, setFormData] = useState({});
@@ -251,10 +252,11 @@ const SignUp = () => {
             onChange={handleChange}
           />
           <button
-            className="bg-blue-500 text-white p-3 rounded-3xl uppercase disabled:opacity-80 hover:bg-blue-800"
+            className=" text-black p-3 rounded-3xl uppercase flex items-center space-x-2 gap-2  justify-center border border-black hover:border-2 hover:bg-slate-200"
             type="submit"
             disabled={loading} // Disable button while loading
           >
+            <FaSignOutAlt />
             {loading ? "Loading..." : "Sign up"}
           </button>
           <OAuth></OAuth>

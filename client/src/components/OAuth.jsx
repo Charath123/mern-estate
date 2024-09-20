@@ -91,7 +91,7 @@ const OAuth = () => {
       onClick={handleGoogleClick}
       type="button"
       // className="bg-blue-400 text-white p-3 rounded-lg uppercase hover:bg-blue-800 "
-      className=" text-black p-3 rounded-3xl uppercase flex items-center space-x-2 gap-2  justify-center border border-black hover:border-2"
+      className=" text-black p-3 rounded-3xl uppercase flex items-center space-x-2 gap-2  justify-center border border-black hover:border-2 hover:bg-slate-200"
     >
       <FaGoogle />
       <span> Continue with Google</span>

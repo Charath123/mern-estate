@@ -20,6 +20,7 @@ import {
 } from "../redux/user/userSlice.js";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { FaSignOutAlt, FaTrash } from "react-icons/fa";
 
 const Profile = () => {
   const fileRef = useRef(null);
@@ -255,9 +256,12 @@ const Profile = () => {
                 handleDeleteUser();
               }
             }}
-            className="text-black cursor-pointer border rounded-xl p-3 border-black border-2 font-semibold bg-slate-100 hover:text-white hover:bg-red-400"
+            className="text-black cursor-pointer border rounded-xl p-3 border-black border-2 font-semibold bg-slate-100 hover:text-white hover:bg-slate-400"
           >
-            Delete account
+            <div className="flex gap-2">
+              <FaTrash className="mt-1" />
+              Delete account
+            </div>
           </span>
           <span
             //onClick={handleSignOut}
@@ -266,9 +270,12 @@ const Profile = () => {
                 handleSignOut();
               }
             }}
-            className="text-black cursor-pointer border rounded-xl p-3 border-black border-2 font-semibold bg-slate-100 hover:text-white hover:bg-red-400"
+            className="text-black cursor-pointer rounded-xl p-3 border-black border-2 font-semibold bg-slate-100 hover:text-white hover:bg-slate-400"
           >
-            Sign out
+            <div className="flex gap-2 justify-center text-center">
+              <FaSignOutAlt className="mt-1" />
+              Sign out
+            </div>
           </span>
         </div>
 
